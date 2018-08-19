@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Yet another Tip Calculator!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container">
+  <h1>Yet another Tip Calculator!</h1>
+  <hr>
+  <div>
+    <label>Select Your Currency:</label><br>
+    <span>Indian Rupee<input type="radio" name="radionbutton" value="1" id="rupee"/></span><br>
+    <span>US Dollar<input type="radio" name="radionbutton" value="2" id="dollar"/></span>
+<hr>
+  </div>
+<div><!-- Total bill box.-->
+  <label>Total Bill:</label>
+  <input type="number" placeholder="Enter your total bill..." min="0" id="totalBill">
+</div>
+<div><!-- Tip box.-->
+  <label>Tip:</label>
+  <input type="range" value="0" id="tipInput">
+  <span id="tipOutput"></span>
+</div>
+<div> <!-- Split bill box.-->
+  <label>Split</label>
+  <input type="number" min="1" value="1" id="tipSplit">
+  <span id="splitOutput"></span>
+</div>
+
+<hr> <!-- second horizontal line. -->
+
+<div>
+  <label>New Bill (per person) : </label><span id="newBill">0</span>
+</div>
+<div>
+  <label>Tip Amount (per person) : </label><span id="tipAmount">0</span>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
