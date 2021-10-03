@@ -1,48 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Yet another Tip Calculator!</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<div id="container">
-  <h1>Yet another Tip Calculator!</h1>
-  <hr>
-  <div>
-    <label>Select Your Currency:</label><br>
-    <span>Indian Rupee<input type="radio" name="radionbutton" value="1" id="rupee"/></span><br>
-    <span>US Dollar<input type="radio" name="radionbutton" value="2" id="dollar"/></span>
-<hr>
+  <div id="container">
+    <h1>Yet another Tip Calculator!</h1>
+
+    <div id="currency">
+      <label>Select Your Currency:</label>
+      <select name="currency" id="currencyType">
+        <option value="1" id="usd">USD</option>
+        <option value="2" id="inr">INR</option>
+        <option value="3" id="eur">EUR</option>
+        <option value="4" id="gby">GBY</option>
+        <option value="5" id="jpy">JPY</option>
+      </select>
+    </div>
+    <div>
+      <!-- Total bill box.-->
+      <label>Total Bill :</label>
+      <input type="text" min="0" id="totalBill">
+    </div>
+    <div class="container1">
+      <div>
+        <!-- Tip box.-->
+        <label>Tip % :</label>
+        <input type="text" name="tipInput" id="tipInput">
+        <span id="tipOutput"></span>
+      </div>
+      <div>
+        <!-- Split bill box.-->
+        <label>Split :</label>
+
+        <input type="range" min="1" max="10" value="1" id="tipSplit">
+        <span id="splitOutput"></span>
+      </div>
+    </div>
+
+    <div class="calculate">
+      <button id="button">calculate</button>
+    </div>
+
+    <div>
+      <label>New Bill (per person) : </label>
+      <span id="currencySign1">$</span>
+      <span id="newBill">0</span>
+    </div>
+    <div>
+      <label>Tip Amount (per person) : </label>
+      <span id="currencySign2">$</span>
+      <span id="tipAmount">0</span>
+    </div>
+
   </div>
-<div><!-- Total bill box.-->
-  <label>Total Bill:</label>
-  <input type="number" placeholder="Enter your total bill..." min="0" id="totalBill">
-</div>
-<div><!-- Tip box.-->
-  <label>Tip:</label>
-  <input type="range" value="0" id="tipInput">
-  <span id="tipOutput"></span>
-</div>
-<div> <!-- Split bill box.-->
-  <label>Split</label>
-  <input type="number" min="1" value="1" id="tipSplit">
-  <span id="splitOutput"></span>
-</div>
 
-<hr> <!-- second horizontal line. -->
-
-<div>
-  <label>New Bill (per person) : </label><span id="newBill">0</span>
-</div>
-<div>
-  <label>Tip Amount (per person) : </label><span id="tipAmount">0</span>
-</div>
-
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
